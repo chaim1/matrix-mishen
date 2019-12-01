@@ -11,32 +11,41 @@
   }
   &-large-img {
     //For Desktop
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 600px) {
       // width: 100%;
-      vertical-align: middle;
+      // vertical-align: middle;
+      height: 300px;
       // max-width: 100%;
 
 
     }
     //For mobile
     @media only screen and (max-width: 600px) {
+      background-position: center;
+      background-size: cover;
       width: 90vw;
       min-height: 200px;
+      margin: 0 auto;
 
     }
   }
   &-small-img {
     //For Desktop
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 600px) {
+      height: 300px;
 
     }
     //For mobile
     @media only screen and (max-width: 600px) {
+      background-position: center;
+      background-size: cover;
       width: 90vw;
+      min-height: 200px;
+      margin: 0 auto;
     }
   }
   &-header-content{
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 600px) {
       position: absolute;
       top: 10px;
       left: 10%;
@@ -44,26 +53,29 @@
       p{
         max-width: 70%;
       }
-      button{
-        position: relative;
-        top: 100px;
-        left: 70%;
-      }
     }
     //For mobile
     @media only screen and (max-width: 600px) {
-      position: absolute;
+      position: relative;
       top: 10px;
       left: 30px;
       z-index: 1;
       h1{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
       p{
-        max-width: 70%;
-      }
-      button{
+        max-width: 60%;
       }
     }
+  }
+}
+button{
+  //For mobile
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 10px;
+  }
+  //For desktop
+  @media only screen and (min-width: 600px) {
+    margin-top: 230px;
   }
 }
