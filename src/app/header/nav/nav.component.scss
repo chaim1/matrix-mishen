@@ -5,4 +5,17 @@
     height: 10vh;
     background-color: rgba($color: #fffefe, $alpha: 1.0)
   }
+  &-margin-logo{
+    //For Desktop
+    @media only screen and (min-width: 768px) {
+      margin-left: 20vw;
+    }
+    //For mobile
+    @media only screen and (max-width: 600px) {
+
+    }
+  }
+  .nav-collapse-bg{
+    width: 100vw !important;
+  }
 }

@@ -25,9 +25,9 @@
               Asperiores,
             </p>
           </div>
-              <div>
-                <button class="border btn btn-light float-right">READ MORE</button>
-              </div>
+          <div>
+            <button class="border btn btn-light float-right">READ MORE</button>
+          </div>
         </div>
         <div
           [ngStyle]="{
@@ -42,9 +42,11 @@
               Asperiores, ut tempora.
             </p>
           </div>
-              <div>
-                <button class="border btn text-white  float-right">READ MORE</button>
-              </div>
+          <div>
+            <button class="border btn text-white  float-right">
+              READ MORE
+            </button>
+          </div>
         </div>
         <div
           [ngStyle]="{
@@ -60,9 +62,11 @@
               Asperiores,
             </p>
           </div>
-              <div>
-                <button class="border btn text-white  float-right">READ MORE</button>
-              </div>
+          <div>
+            <button class="border btn text-white  float-right">
+              READ MORE
+            </button>
+          </div>
         </div>
         <div
           [ngStyle]="{
@@ -115,7 +119,9 @@
             </p>
           </div>
           <div>
-            <button class="border btn text-white  float-right">READ MORE</button>
+            <button class="border btn text-white  float-right">
+              READ MORE
+            </button>
           </div>
         </div>
       </div>
@@ -123,5 +129,59 @@
   </div>
   <div class="mt-5">
     <h1 class="text-center font-weight-light">EVERY INDUSTRY EVERY SERVICE</h1>
+  </div>
+  <div class="d-none d-lg-block container divSliderImage">
+    <ul>
+      <div *ngFor="let item of sliderImage">
+        <li (click)="nextSliderImage(item.id)" class="btn liCenter float-left">
+          {{ item.header }}
+        </li>
+      </div>
+    </ul>
+  </div>
+  <div
+    [ngStyle]="{
+      'background-image': 'url(' + sliderImage[numSliderImage].img + ')'
+    }"
+    class="div-content-slider-image container"
+  >
+    <!-- <img class="" [src]="sliderImage[numSliderImage].img" alt="" /> -->
+
+    <div class="card div-slider-content" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">
+          <a
+            (click)="idSliderRev(numSliderImage)"
+            class="mr-2 d-inline text-info"
+            ><</a
+          >{{ sliderImage[numSliderImage].header
+          }}<a
+            (click)="idSliderDrv(numSliderImage)"
+            class="ml-2 d-inline text-info"
+            >></a
+          >
+        </h5>
+        <p class="card-text">{{ sliderImage[numSliderImage].content }}</p>
+        <a href="#" class="btn btn-primary">READ MORE</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer mt-5">
+    <div class="footer-header d-sm-none d-md-block">
+      
+    </div>
+    <div class="footer-footer">
+      <div class="footer-social-networks mt-5 mb-5" >
+        <div class="float-left ml-3">
+        <img class="" src="../../assets/images/facebook.jpg" alt=""></div>
+        <div class="float-left ml-3">
+        <img src="../../assets/images/linkedin.jpg" alt=""></div>
+          <div class="float-left ml-3">
+        <img src="../../assets/images/youtube.jpg" alt=""></div>
+      </div>
+      <div class="footer-reserved">
+          <small >All rights reserved by <img src="../../assets/images/matrix-logo-footer.png" alt=""> © 2019 </small>
+      </div>
+    </div>
   </div>
 </div>
