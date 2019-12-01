@@ -1,0 +1,103 @@
+.header {
+  &-main {
+    z-index: 3;
+    &-img-bg {
+      //For Desktop
+      @media only screen and (min-width: 768px) {
+        width: 100%;
+      }
+      //For mobile
+      @media only screen and (max-width: 600px) {
+        transform: translate(-40%);
+        height: 75vh;
+      }
+    }
+    &-img-slogen {
+      //For Desktop
+      @media only screen and (min-width: 600px) {
+        max-width: 32vw;
+        top: 33vh;
+        left: 33%;
+        animation: moveInTop 0.5s ease-out 0.75s;
+        animation-fill-mode: backwards;
+      }
+      //For mobile
+      @media only screen and (max-width: 600px) {
+        max-width: 92vw;
+        top: 30vh;
+        left: 5vw;
+        animation: moveInTop 0.5s ease-out 0.75s;
+        animation-fill-mode: backwards;
+      }
+    }
+    &-img-down{
+      //For Desktop
+      @media only screen and (min-width: 600px) {
+        max-width: 3vw;
+        top: 70vh;
+        left: 48%;
+        animation: moveInBottom 0.5s ease-out 0.75s;
+        animation-fill-mode: backwards;
+        &:hover{
+          animation:moveInHoverDesktop 0.5s ease-out 0.75s;
+        }
+      }
+      //For mobile
+      @media only screen and (max-width: 600px) {
+        max-width: 15vw;
+        top: 66vh;
+        left: 42vw;
+        animation: moveInBottom 0.5s ease-out 0.75s;
+        animation-fill-mode: backwards;
+        &:hover{
+          animation: moveInHoverMobile 0.5s ease-out 0.75s;
+        }
+      }
+
+    }
+  }
+}
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInHoverMobile {
+  0% {
+    width:15vw ;
+  }
+
+  100% {
+    width:13vw ;
+  }
+}
+@keyframes moveInHoverDesktop {
+  0% {
+    width:3vw ;
+  }
+
+  100% {
+    width:2.7vw ;
+  }
+}
+
+.test {
+  height: 1000px;
+}
